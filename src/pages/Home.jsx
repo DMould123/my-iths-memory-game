@@ -1,43 +1,56 @@
-/* eslint-disable no-undef */
 import React, { useState } from 'react'
+import jon from '../images/jon.png'
 
 const studentImages = [
-  {'src': '../../assets/images/adam.png'},
-  {'src': '../../assets/images/björn.png'},
-  {'src': '../../assets/images/calle.png'},
-  {'src': '../../assets/images/david.png'},
-  {'src': '../../assets/images/emelie.png'},
-  {'src': '../../assets/images/erika.png'},
-  {'src': '../../assets/images/fred.png'},
-  {'src': '../../assets/images/gustav.png'},
-  {'src': '../../assets/images/jon.png'},
-  {'src': '../../assets/images/ludwig.png'},
-  {'src': '../../assets/images/mahdi.png'},
-  {'src': '../../assets/images/pernilla.png'}
+  {'src': '../images/adam.png'},
+  {'src': '../..images/björn.png'},
+  {'src': '../..images/calle.png'},
+  {'src': '../..images/david.png'},
+  {'src': '../..images/emelie.png'},
+  {'src': '../..images/erika.png'},
+  {'src': '../..images/fred.png'},
+  {'src': '../..images/gustav.png'},
+  {'src': '../..images/jon.png'},
+  {'src': '../..images/ludwig.png'},
+  {'src': '../..images/mahdi.png'},
+  {'src': '../../images/pernilla.png'},
 ]
 
 
 const Home = () => {
-const [cards, setCards] = useState([])
-const [turns, setTurns] = useState(0)
+const [tiles, setTiles] = useState([])
+const [attempts, setAttempts] = useState(0)
 
 
-//shuffle cards
-const randomiseCards = () => {
- const randomisedCards = [...studentImages, ...studentImages]
+//shuffle tiles
+const randomiseTiles = () => {
+ const randomisedTiles = [...studentImages, ...studentImages]
   .sort(() => Math.random() -0.5)
-  .map((card) => ({...card, id: Math.random() }))
+  .map((tile) => ({...tile, id: Math.random() }))
 
-  setCards(randomisedCards)
-  setTurns(0)
+  setTiles(randomisedTiles)
+  setAttempts(0)
 }
 
-console.log(cards, turns)
+console.log(tiles, attempts)
 
   return (
     <div id='home'>
      <h1>ITHS Memory Game</h1>
-     <button onClick={randomiseCards}>New Game</button>
+     <button onClick={randomiseTiles}>New Game</button>
+
+<div className="card-layout">
+{tiles.map(tile => (
+  <div className='tile' key={tile.src}>
+    <div>
+    <img className='front ' src={tile.src} alt="tile-front" />
+      <img className='back' src={jon} alt='tile-back' />
+    </div>
+  </div>
+)
+
+)}
+     </div>
     </div>
   )
 }
