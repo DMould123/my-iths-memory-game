@@ -9,9 +9,6 @@
 }
 
 /* Global styles  */
-#root {
-  min-height: 100vh;
-}
 
 .App {
   min-height: 100vh;
@@ -23,4 +20,12 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   color: #fff;
+  overflow-y: auto;
+}
+
+.card-layout {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
 }
