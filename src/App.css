@@ -1,31 +1,28 @@
-/* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Open+Sans:wght@300;400&display=swap');
-
-/* Reset */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-
-/* Global styles  */
 
 .App {
-  min-height: 100vh;
-  background-color: blueviolet;
+  max-width: 860px;
+  margin: 40px auto;
 }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
-  min-height: 100vh;
-  color: #fff;
-  overflow-y: auto;
+button {
+  background: none;
+  border: 2px solid white;
+  font-weight: bold;
+  padding: 6px 12px;
+  color: blueviolet;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin: 10px;
 }
 
 .card-layout {
-  margin-top: 40px;
   display: grid;
+  margin: 30px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
 }

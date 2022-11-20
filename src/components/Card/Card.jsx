@@ -2,13 +2,16 @@ import React from 'react'
 import './Card.css'
 import back from '../../images/ithslogo.png'
 
-const Card = ({card, chooseOption}) => {
+const Card = ({card, chooseOption, turned, disabled}) => {
 const handleClick = () => {
-  chooseOption(card)
+  if(!disabled) {
+    chooseOption(card)
+  }
+
 }
   return (
     <div className='card'>
-    <div>
+    <div className={turned  ? 'turned' : "" }>
     <img className='front ' src={card.src} alt="card-front" />
       <img className='back'
       src={back}
