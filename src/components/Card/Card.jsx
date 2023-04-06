@@ -1,6 +1,6 @@
 import React from 'react'
 import './Card.css'
-import back from '../../images/ithslogo.png'
+import back from '../../images/wolves.png'
 
 const Card = ({card, chooseOption, turned, disabled}) => {
 const handleClick = () => {
