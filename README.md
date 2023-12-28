@@ -25,13 +25,13 @@ To run the Memory Game app locally, follow these steps:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/memory-game-app.git
+   git clone https://github.com/your-username/wolvesfc-memory-game.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd memory-game-app
+   cd wolvesfc-memory-game
    ```
 
 3. Install the required dependencies:
