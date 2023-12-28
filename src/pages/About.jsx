@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiFillLinkedin, AiFillGithub, AiFillTwitterCircle } from 'react-icons/ai';
-import cv from '../files/David-Mould-CV.pdf';
-import grades from '../files/David Mould - grades.pdf'
+import cv from '../files/David Mould - Dual Language, CV.pdf';
+import grades from '../files/Examensbevis - David Mould.pdf'
 
 const About = () => {
   const handleDownloadCV = () => {
@@ -13,7 +13,7 @@ const About = () => {
   }
 
   const handleVisitWebsite = () => {
-    window.open('https://www.your-website-url.com')
+    window.open('https://david-mould-portfolio-page.netlify.app')
   }
 
   return (
@@ -34,20 +34,18 @@ const About = () => {
           </div>
         </div>
         <p>
-          I'm David Mould, a newly qualified developer! Throughout my studies,
-          I have acquired a strong foundation in a variety of languages,
-          I hope you enjoyed playing my memory game of my favorite football team! If you are
-          keen to find out more about me, please visit my Portfolio website or download my
-          resume.
+          I'm David Mould, a newly qualified developer! <br />
+          I hope you enjoyed playing my memory game of my favorite football team :) <br />If you are
+          keen to find out more about me, please visit my Portfolio website.
         </p>
         <button className="dw-btn" onClick={handleVisitWebsite}>
           Visit My Website
         </button>
         <button className="dw-btn" onClick={handleDownloadCV}>
-          Download My Resume
+          Download CV
         </button>
         <button className="dw-btn" onClick={handleDownloadGrades}>
-          Download Grades
+          Download My Diploma
         </button>
       </div>
     </div>

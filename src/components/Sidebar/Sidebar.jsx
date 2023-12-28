@@ -21,7 +21,7 @@ const Sidebar = () => {
       className: 'sidebar-text',
     },
     {
-      title: 'Contact Us',
+      title: 'Contact Me',
       path: '/contact',
       icon: <FaIcons.FaEnvelope />,
       className: 'sidebar-text',
